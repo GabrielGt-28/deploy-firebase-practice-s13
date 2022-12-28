@@ -1,0 +1,12 @@
+.section-login {
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

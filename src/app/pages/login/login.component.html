@@ -1,0 +1,34 @@
+<section class="section-login">
+  <mat-spinner diameter="40" *ngIf="loading"></mat-spinner>
+
+  <form
+    class="content-form"
+    [formGroup]="myForm"
+    (submit)="onSubmit()"
+    *ngIf="!loading"
+  >
+    <h2>Login</h2>
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput type="text" name="user" formControlName="user" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input
+        matInput
+        type="password"
+        name="password"
+        formControlName="password"
+      />
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="myForm.invalid"
+    >
+      Ingresar
+    </button>
+  </form>
+</section>
